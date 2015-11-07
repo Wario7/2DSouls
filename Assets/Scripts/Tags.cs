@@ -11,6 +11,8 @@ public class Tags : MonoBehaviour
 	public const string mainLight = "MainLight";
 	public const string fader = "Fader";
 	public const string enemy = "Enemy";
+	public const string sword = "Sword";
+	public const string axe = "Axe";
 
 	public const string idle = "idle";
 	public const string attack = "attack1";

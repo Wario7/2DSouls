@@ -5,7 +5,8 @@ public class MoveController : MonoBehaviour {
 
 	public float speed = 6f;
 	public float jumpHeight = 700f;
-	public Transform circle;
+	public Transform leftFoot;
+	public Transform rightFoot;
 	public float circleRadius = 0.2f;
 	public LayerMask whatIsGround;
 	public bool canMove = true;
@@ -17,15 +18,15 @@ public class MoveController : MonoBehaviour {
 	
 	public bool facingRight = true;
 	Vector2 movement;
-	Animator anim;
+//	Animator anim;
 	Rigidbody2D playerRigidbody;
 
-	MoveController instance;
+	AttackController attackController;
 	
 	void Start () {
-		instance = this;
-		anim = GetComponent<Animator>();
+//		anim = GetComponent<Animator>();
 		playerRigidbody = GetComponent<Rigidbody2D> ();
+		attackController = GetComponent<AttackController>();
 	}
 	
 	void FixedUpdate() //deals with physics update
@@ -34,10 +35,11 @@ public class MoveController : MonoBehaviour {
 		//Edit -> Project Settings -> Input
 		//Horizontal = a and d buttons
 		float v = Input.GetAxisRaw ("Vertical");
-		onGround = Physics2D.OverlapCircle(circle.position, circleRadius, whatIsGround);
+		onGround = Physics2D.OverlapCircle(leftFoot.position, circleRadius, whatIsGround) ||
+				   Physics2D.OverlapCircle(rightFoot.position, circleRadius, whatIsGround);
 		if (canMove)
 			Move (h, v);
-		if (onGround) { //TODO: and is not in attack animation..
+		if (onGround && !attackController.engagedIntoBattle) { //TODO: and is not in attack animation..
 			canMove = true;
 		} else {
 			canMove = false;
@@ -50,14 +52,12 @@ public class MoveController : MonoBehaviour {
 		if (clickedJump && onGround)
 			jump();
 	}
-	
-	void Move (float h, float v)
+	public void Move (float h, float v)
 	{	
-		
+	
 		//movement.Set (h, 0f);
 		//playerRigidbody.AddForce (movement * speed, ForceMode2D.Force);
 		playerRigidbody.velocity = new Vector2 (h * speed, playerRigidbody.velocity.y);
-		
 		if(h > 0f && !facingRight)
 			flip();
 		if (h < 0f && facingRight)
@@ -88,5 +88,10 @@ public class MoveController : MonoBehaviour {
 //		bool walking = h != 0f || v != 0f;
 		//anim.SetBool ("IsMoving", walking);
 		
+	}
+
+	public void Attacked(){
+		playerRigidbody.velocity = new Vector2();
+		playerRigidbody.AddForce (new Vector2 (50 * (facingRight? 1:-1), 0), ForceMode2D.Force);
 	}
 }

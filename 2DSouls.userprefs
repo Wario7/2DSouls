@@ -1,33 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\New Unity Project 3\Assets\Done\DoneScripts\UnappliedScripts\DoneTags.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MoveController.cs">
     <Files>
-      <File FileName="Assets\Scripts\AttackController.cs" Line="43" Column="24" />
-      <File FileName="Assets\Scripts\HealthManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\groundInstantiator.cs" Line="1" Column="1" />
-      <File FileName="..\Test\Assets\Scripts\Scene1\BulletFiring.cs" Line="1" Column="1" />
-      <File FileName="Assets\Completed\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="..\SurvivalShooter\Assets\Scripts\Player\PlayerHealth.cs" Line="1" Column="1" />
-      <File FileName="..\SurvivalShooter\Assets\Scripts\Player\PlayerShooting.cs" Line="1" Column="1" />
-      <File FileName="..\SurvivalShooter\Assets\Scripts\Managers\EnemyManager.cs" Line="1" Column="1" />
-      <File FileName="..\SurvivalShooter\Assets\Scripts\Enemy\EnemyAttack.cs" Line="1" Column="1" />
-      <File FileName="Assets\AttackManager.cs" Line="1" Column="1" />
-      <File FileName="..\Test\Assets\Scripts\Scene1\PlayerHealth.cs" Line="1" Column="1" />
-      <File FileName="..\Test\Assets\Scripts\Scene1\EnemyBehaviour.cs" Line="1" Column="1" />
-      <File FileName="..\Test\Assets\Scripts\Scene1\playerController.cs" Line="1" Column="1" />
-      <File FileName="..\Test\Assets\Scripts\Scene1\DestroyByContact.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MoveController.cs" Line="40" Column="59" />
-      <File FileName="Assets\Scripts\HashIDs.cs" Line="26" Column="47" />
-      <File FileName="..\New Unity Project 3\Assets\Done\DoneScripts\PlayerScripts\DonePlayerMovement.cs" Line="19" Column="50" />
-      <File FileName="..\New Unity Project 3\Assets\Done\DoneScripts\UnappliedScripts\DoneTags.cs" Line="15" Column="1" />
+      <File FileName="Assets\Scripts\AttackController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tags.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MoveController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Scripts" expanded="True">
-              <Node name="AttackController.cs" selected="True" />
+            <Node name="Completed" expanded="True">
+              <Node name="Scripts" expanded="True" />
             </Node>
+            <Node name="Scripts" expanded="True" />
+            <Node name="EnemySpawner.cs" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -36,19 +23,20 @@
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
-          <Value>transformHolder</Value>
-          <Value>SWORD_POSITION</Value>
-          <Value>asi.m_Tag</Value>
-          <Value>asi.IsTag("idle")</Value>
-          <Value>onGround</Value>
-          <Value>other.tag</Value>
+          <Value>asi</Value>
+          <Value>!anim.GetBool(hash.stoppedAttackBool)</Value>
+          <Value>other</Value>
+          <Value>player</Value>
+          <Value>player.GetComponent&lt;AttackController&gt;().engagedIntoBattle</Value>
+          <Value>other.tag == "Weapon"</Value>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\Aziz\Documents\UnityProjects\2DSouls\Assets\AttackManager.cs" line="9" />
+      <Breakpoint file="C:\Users\Aziz\Documents\UnityProjects\2DSouls\Assets\Scripts\AttackControllerr.cs" line="27" />
+      <Breakpoint file="C:\Users\Aziz\Documents\UnityProjects\2DSouls\Assets\Health.cs" line="119" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

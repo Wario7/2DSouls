@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AttackManager.cs" />
      <Compile Include="Assets\Completed\Scripts\BoardManager.cs" />
      <Compile Include="Assets\Completed\Scripts\Enemy.cs" />
      <Compile Include="Assets\Completed\Scripts\GameManager.cs" />
@@ -64,9 +63,14 @@
      <Compile Include="Assets\Game Jam Menu Template\Scripts\ShowPanels.cs" />
      <Compile Include="Assets\Game Jam Menu Template\Scripts\StartOptions.cs" />
      <Compile Include="Assets\Scripts\AttackController.cs" />
+     <Compile Include="Assets\Scripts\AttackManager.cs" />
+     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\EnemyAI.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\HashIDs.cs" />
-     <Compile Include="Assets\Scripts\HealthManager.cs" />
+     <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\MoveController.cs" />
+     <Compile Include="Assets\Scripts\SwapWeapons.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
      <Compile Include="Assets\Scripts\groundInstantiator.cs" />
      <Compile Include="Assets\Scripts\moveSword.cs" />

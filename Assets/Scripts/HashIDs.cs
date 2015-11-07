@@ -4,10 +4,8 @@ using System.Collections;
 public class HashIDs : MonoBehaviour
 {
 	// Here we store the hash tags for various strings used in our animators
-	public int attackBool;
-	public int attack2Bool;
-	public int attack3Bool;
-	public int stoppedAttackBool;
+	[HideInInspector]
+	public int attackBool, attack2Bool, attack3Bool, stoppedAttackBool, sword, axe;
 
 	void Awake ()
 	{
@@ -23,6 +21,9 @@ public class HashIDs : MonoBehaviour
 //		aimWeightFloat = Animator.StringToHash("AimWeight");
 //		angularSpeedFloat = Animator.StringToHash("AngularSpeed");
 //		openBool = Animator.StringToHash("Open");
+
+		sword = Animator.StringToHash ("Sword");
+		axe = Animator.StringToHash ("Axe");
 
 		attackBool = Animator.StringToHash("attack");
 		attack2Bool = Animator.StringToHash("attack2");
